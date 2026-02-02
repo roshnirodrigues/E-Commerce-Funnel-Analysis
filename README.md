@@ -237,6 +237,8 @@ Reduction	Recovered Orders	Recoverable Revenue
 
 Even small improvements recover meaningful revenue.
 
+---
+
 ## 🛠️ Tools Used
 
 - PostgreSQL – joins, CTEs, window functions, views
@@ -244,6 +246,8 @@ Even small improvements recover meaningful revenue.
 - Excel – What-If Data Tables for scenarios
 
 - Power BI – KPIs, funnel visuals, navigation
+  
+---
 
 ## ⚠️ Limitations
 
@@ -255,136 +259,3 @@ Even small improvements recover meaningful revenue.
 
 
 ---
-
-If you want next, I can help you with:
-
-✅ Screenshot section layout  
-✅ Repo structure cleanup  
-✅ Portfolio project ordering  
-✅ Resume bullet points  
-✅ Recruiter-friendly project summaries  
-
-Just say: **“review my portfolio structure”**.
-
-in md code:
-2. Calculating Conversion % by Device 
-To determine if the conversion issues were device-specific, I utilized the FILTER clause.
-
-sql
-SELECT COUNT(DISTINCT fs.session_id) FILTER (WHERE fs.event_step = 5) AS sessions_converted , COUNT(DISTINCT s.session_id) AS total_sessions, u.device,
-	   ROUND(COUNT(DISTINCT fs.session_id) FILTER (WHERE fs.event_step = 5) * 100.0 /COUNT(DISTINCT s.session_id), 2) AS session_conversion_pct
-FROM clean_sessions s
-LEFT JOIN funnel_steps fs ON fs.session_id = s.session_id
-LEFT JOIN clean_users u ON u.user_id = fs.user_id
-GROUP BY u.device;
-
-Dashboard Pages
-
-Page 1: Conversion Overview
-
-This page provides a high-level view of overall conversion performance.
-
-It includes:
-
-*Total sessions and converted sessions
-
-*Conversion rate, bounce rate, and average order value
-
-*Converted sessions by device, city, traffic source, and user type
-
-The purpose of this page is to understand how traffic is converting at a broad level and which segments contribute most to conversions.
-
-Page 2: Funnel & Drop-Off Analysis
-
-This page focuses on understanding where users drop off in the funnel.
-
-It includes:
-*Funnel step-wise session counts
-
-*Drop-off count at each stage
-
-*Cart abandonment rate
-
-*Drop-offs segmented by device, city, and traffic source
-
-Navigation buttons were used to move between dashboard pages for better user experience.
-
-Key Insights
-
-The sharpest drop-off occurs after Product View and before Add to Cart, indicating potential issues related to pricing, product information, or add-to-cart functionality.
-
-The next largest drop-off occurs at the Checkout stage, contributing to a high cart abandonment rate.
-
-Drop-off patterns are broadly similar across devices and traffic sources, suggesting the issue is funnel-wide rather than segment-specific.
-
-This indicates that conversion issues are likely driven by core user experience or pricing factors rather than marketing channels or device mix.
-
-Business Recommendations
-
-Prioritise optimisation at the Product View → Add to Cart stage
-
-Review pricing visibility and perceived value
-
-Improve product descriptions and imagery
-
-Validate add-to-cart functionality
-
-2. Reduce checkout friction to address cart abandonment
-
-Simplify checkout steps
-
-Improve trust and payment clarity
-
-Reduce unexpected costs at checkout
-
-3. Focus on funnel-wide improvements rather than segment-specific optimisation
-
-Since drop-offs are consistent across devices and traffic sources, addressing core funnel issues will have broader impact.
-
-Business Impact: Prescriptive Analysis (Scenario-Based)
-
-Scenario analysis was conducted to estimate the potential reduction in drop-off at the Add to Cart stage and the recoverable revenue from abandoned cart users if the recommended actions are implemented.
-
-Scenario 1: Product View → Add to Cart (Drop-Off Reduction)
-
-Current Add-to-Cart (ATC) conversion rate: 32%
-
-Drop-off Reduction	Recovered Users	Potential ATC Conversion Rate
-5%	619	34%
-10%	1,238	36%
-15%	1,857	38%
-
-Interpretation:
-Reducing drop-off at the Product View → Add to Cart stage by 10% increases ATC conversion by ~4%, making this the highest-impact optimisation opportunity in the funnel.
-
-Scenario 2: Cart Abandonment → Recoverable Revenue
-
-Reduction in Cart Abandonment	Recovered Orders	Recoverable Revenue
-1%	59	₹1.85L
-2%	117	₹3.70L
-5%	293	₹9.27L
- 
-Interpretation:
-Even small reductions in cart abandonment (1–2%) can recover meaningful revenue without increasing traffic or marketing spend.
-
-
-Tools Used
-
-PostgreSQL – joins, CTEs, window functions, views, constraints
-
-Excel – What-If Data Tables for scenario analysis
-
-Power BI – KPIs, funnel visualisation, navigation buttons
-
-Limitations
-
-The dataset is synthetic and used for analytical demonstration
-
-Scenario analysis is assumption-based and not predictive
-
-Pricing and UX issues are inferred from behaviour, not directly observed
-
-Your Markdown issue is that the SQL code block was never closed, so everything after it is being rendered as code.
-
-You need to close the SQL block with three backticks before continuing normal text.
-
