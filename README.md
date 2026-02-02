@@ -1,5 +1,9 @@
 # 🛒 E-Commerce Conversion & Funnel Analysis
 
+<p align="center">
+  <img src="images/Ecommerce Funnel - Overview.png" width="600">
+</p>
+
 ## 🚀 Project Overview
 
 This project analyses an e-commerce funnel to understand why high traffic does not translate into proportional conversions and sales. The focus was on identifying where users drop off during the purchase journey and whether these drop-offs are driven by specific segments or by broader funnel issues.
@@ -144,6 +148,10 @@ GROUP BY u.device;
 ## 📊 Dashboard Pages
 ### Page 1: Conversion Overview
 
+<p align="center">
+  <img src="images/Ecommerce Funnel - Overview.png" width="800">
+</p>
+
 Provides a high-level view of conversion performance.
 
 Includes:
@@ -158,6 +166,10 @@ This page helps understand overall conversion performance and segment contributi
 
 
 ### Page 2: Funnel & Drop-Off Analysis
+
+<p align="center">
+  <img src="images/Ecommerce Funnel - Drop Off Analysis.png" width="800">
+</p>
 
 Focuses on identifying where users exit the funnel.
 
