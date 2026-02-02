@@ -179,7 +179,7 @@ Navigation buttons improve usability across dashboard pages.
 
 - **Largest drop-off occurs between Product View and Add to Cart**, indicating potential issues related to pricing, product information, or add-to-cart functionality.
 
-- **Second largest drop-off occurs at Checkout**
+- **Second largest drop-off occurs at Checkout** contributing to a high cart abandonment rate.
 
 - **Drop-offs are similar across devices and traffic sources** 
 
@@ -260,4 +260,3 @@ Even small reductions in cart abandonment (1–2%) can recover meaningful revenu
 - Pricing and UX issues inferred indirectly
 
 
----
