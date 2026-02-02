@@ -99,6 +99,11 @@ Funnel performance was segmented by:
 
 Aggregated tables were then imported into Power BI for visualisation.
 
+## Optimizing for Power BI
+One of the biggest challenges was managing the model's complexity. Initially, I imported a detailed drop-off analysis table alongside the raw data. The original data import consisted of 9 tables, creating an overly complex Snowflake Schema that was difficult to navigate and maintain.
+
+I merged the drop-off analysis tables to reduce the model to 5 core tables. This reduction removed unnecessary "hops" between tables, transforming the model into a more efficient Star Schema. This streamlined architecture improved report performance and made the creation of DAX measures significantly more straightforward.
+
 ---
 
 ## 💻 SQL Code Snippets
