@@ -44,7 +44,7 @@ Together, these tables represent the funnel:
 
 All data cleaning and transformation were performed in PostgreSQL.
 
-Initial steps included understanding dataset structure and relationships.
+Before analysis, I first explored the dataset to understand its structure and fields.
 
 Key preparation steps:
 
@@ -78,7 +78,7 @@ Final tables were created with constraints and imported into Power BI.
 
 ## 🔍 Analysis Approach
 
-Key funnel metrics calculated using SQL:
+Using SQL, I calculated key metrics such as:
 
 - Total sessions and converted sessions
 - Conversion rate
@@ -148,11 +148,11 @@ Provides a high-level view of conversion performance.
 
 Includes:
 
-Total sessions and converted sessions
+- Total sessions and converted sessions
 
-Conversion rate, bounce rate, average order value
+- Conversion rate, bounce rate, average order value
 
-Converted sessions by device, city, traffic source, and user type
+- Converted sessions by device, city, traffic source, and user type
 
 This page helps understand overall conversion performance and segment contributions.
 
@@ -163,13 +163,13 @@ Focuses on identifying where users exit the funnel.
 
 Includes:
 
-Funnel stage-wise session counts
+- Funnel stage-wise session counts
 
-Drop-off count at each stage
+- Drop-off count at each stage
 
-Cart abandonment rate
+- Cart abandonment rate
 
-Drop-offs segmented by device, city, and traffic source
+- Drop-offs segmented by device, city, and traffic source
 
 Navigation buttons improve usability across dashboard pages.
 
@@ -177,15 +177,15 @@ Navigation buttons improve usability across dashboard pages.
 
 ## 💡 Key Insights
 
-- **Largest drop-off occurs between Product View and Add to Cart**
+- **Largest drop-off occurs between Product View and Add to Cart**, indicating potential issues related to pricing, product information, or add-to-cart functionality.
 
 - **Second largest drop-off occurs at Checkout**
 
-- **Drop-offs are similar across devices and traffic sources**
+- **Drop-offs are similar across devices and traffic sources** 
 
 - Conversion issues appear funnel-wide rather than segment-specific
 
-- Pricing perception and UX friction likely contribute to drop-offs
+- This indicates that conversion issues are likely driven by core user experience or pricing factors rather than marketing channels or device mix.
 
 ---
 
@@ -221,21 +221,23 @@ Scenario analysis estimates potential improvements if recommendations are implem
 
 Current ATC conversion rate: 32%
 
-Drop-off Reduction	Recovered Users	Potential ATC Conversion
-5%	619	34%
-10%	1,238	36%
-15%	1,857	38%
+| Drop-off Reduction | Recovered Users | Potential ATC Conversion |
+|--------------------|----------------|---------------------------|
+| 5%  | 619   | 34% |
+| 10% | 1,238 | 36% |
+| 15% | 1,857 | 38% |
 
 Reducing drop-off by 10% improves ATC conversion by ~4%.
 
 ### Scenario 2: Cart Abandonment Recovery
 
-Reduction	Recovered Orders	Recoverable Revenue
-1%	59	₹1.85L
-2%	117	₹3.70L
-5%	293	₹9.27L
+| Reduction | Recovered Orders | Recoverable Revenue |
+|-----------|------------------|---------------------|
+| 1% | 59  | ₹1.85L |
+| 2% | 117 | ₹3.70L |
+| 5% | 293 | ₹9.27L |
 
-Even small improvements recover meaningful revenue.
+Even small reductions in cart abandonment (1–2%) can recover meaningful revenue without increasing traffic or marketing spend.
 
 ---
 
